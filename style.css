@@ -9,14 +9,14 @@ body{
     margin: 0;
     padding: 0;
 }
-.center{
+/* .center{
     display: flex;
-    /* border: 5px solid black; */
+    border: 5px solid black; 
     min-height: 100vh;
     height: 100vh;
     justify-content: center;
     align-items: center;
-}
+} */
 .parent{
     /* border: 2px solid red; */
     display: grid;  
@@ -29,6 +29,14 @@ body{
 
 }
 @media(min-width: 592px){
+    .center{
+        display: flex;
+        /* border: 5px solid black; */
+        min-height: 100vh;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+    }
     .image{
         content: url('images/image-product-desktop.jpg');
         width: 300px;
