@@ -1,0 +1,106 @@
+/* font-family: 'Montserrat', sans-serif;
+font-family: 'Fraunces', serif; */
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: hsl(30, 38%, 92%);
+    margin: 0;
+    padding: 0;
+}
+.center{
+    display: flex;
+    /* border: 5px solid black; */
+    min-height: 100vh;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+.parent{
+    /* border: 2px solid red; */
+    display: grid;  
+    border-radius: 10px;
+    overflow: hidden;
+    grid-template-areas: 
+    'one'
+    'two';
+    margin: 20px 20px 20px 20px;
+
+}
+@media(min-width: 592px){
+    .image{
+        content: url('images/image-product-desktop.jpg');
+        width: 300px;
+    }
+    .parent{
+        grid-template-areas: 
+        'one two';
+        grid-template-columns: 1fr 1fr;
+        width: 580px;       
+    }
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+
+.text div:nth-child(1){
+    /* border: 2px solid red; */
+    color: hsl(228, 12%, 48%);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.7em;
+}
+.text div:nth-child(2){
+    color: rgb(45, 42, 42);
+    font-family: 'Fraunces', serif;
+    line-height: 0.99;
+}
+.text div:nth-child(3){
+    color: hsl(228, 12%, 48%);
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.8;
+    font-size: 0.9em;
+}
+.price{
+    display: flex;
+    align-items: center;
+
+}
+.price h1{
+    color: hsl(158, 36%, 37%);
+    font-family: 'Fraunces', serif;
+}
+.price p{
+    text-decoration: line-through;
+    margin-left: 15px;
+    color: hsl(228, 12%, 48%);    
+}
+.image{
+    grid-area: one;
+}
+.text{
+    grid-area: two;
+    background-color: hsl(0, 0%, 100%);
+    padding: 20px;   
+}
+button{
+    background-color: hsl(158, 36%, 37%);
+    border: none;
+    color: white;
+    width: 100%;
+    height: 3.8em;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+.buttons img{
+    width: 13px;
+    height: auto;
+    margin-right: 10px;
+}
+button:hover{
+    background-color: hsl(158, 67%, 23%); 
+    cursor: pointer;
+}
